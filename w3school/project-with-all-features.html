@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venture Fond</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            flex-wrap: nowrap;
+            background-color: #a3aaa3;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar .cta {
+            background-color: #dd4444;
+            color: #fcfcfc;
+            font-weight: bold;
+        }
+
+        .navbar .cta:hover {
+            background-color: rgba(221, 68, 68, 0.78); /* Темнее при наведении */
+        }
+
+
+        .section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            padding: 20px;
+        }
+
+        .section:nth-child(odd) {
+            background-color: #f8f8f8;
+        }
+
+        .section:nth-child(even) {
+            background-color: #d0d0d0;
+        }
+
+        .navbar .links {
+            display: flex;
+            gap: 40px /* Устанавливает расстояние между ссылками */
+        }
+
+        .navbar .actions {
+            margin-right: 40px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .block {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .block.red {
+            background-color: #ff4d4d;
+            color: #fff;
+        }
+
+        .block img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .block h1 {
+            font-size: 50px;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+        }
+
+        .block p {
+            font-size: 30px;
+            margin: 5px 0;
+        }
+
+        .cta1 {
+            background-color: #fff;
+            color: #ff4d4d;
+            border: 2px solid #ff4d4d;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .cta1:hover {
+            background-color: #dd4444;
+            color: #fff;
+        }
+
+        /*#welcome {*/
+        /*    width:400px;*/
+        /*    margin-right: 20px;*/
+        /*    text-align: justify;*/
+        /*    letter-spacing: 2px;*/
+        /*    word-spacing: 3px;*/
+        /*}*/
+
+        #ab {
+            text-align: center;
+            line-height: 1.2;
+            margin: 0;
+            font-size: 20px;
+
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="links">
+        <a href="#about">О нас</a>
+        <a href="#team">Команда</a>
+        <a href="#portfolio">Портфельные стартапы</a>
+        <a href="#accelerator">Акселератор</a>
+    </div>
+    <div class="actions">
+        <a href="#" class="cta">Оставить заявку</a>
+        <a href="#" class="language">EN</a>
+    </div>
+</div>
+
+<div id="about" class="section">
+    <h1 id="ab">О нас</h1>
+    <div class="container">
+        <div class="block red">
+            <h1>KBTU VENTURES</h1>
+            <p>Добро пожаловать! Мы предоставляем услуги и помогаем стартапам расти.</p>
+            <p>Частный венчурный фонд в Центральной Азии</p>
+            <a href="#" class="cta1">Apply now</a>
+        </div>
+        <div class="block">
+            <img src="R.jpg">
+        </div>
+        <div class="block">
+            <h1>От 50 000$</h1>
+            <p>на стадии Pre-seed</p>
+        </div>
+        <div class="block">
+            <h1>От $100 000</h1>
+            <p>на стадии Seed</p>
+        </div>
+    </div>
+</div>
+<div id="team" class="section">
+    <h1>Команда</h1>
+    <p>Наша команда состоит из профессионалов, работающих для вашего успеха.</p>
+</div>
+<div id="portfolio" class="section">
+    <h1>Портфельные стартапы</h1>
+    <p>Мы инвестировали в более чем 50 успешных стартапов.</p>
+</div>
+<div id="accelerator" class="section">
+    <h1>Акселератор</h1>
+    <p>Присоединяйтесь к нашему акселератору для быстрого роста вашего бизнеса.</p>
+</div>
+<div class="section">
+    <h1>Контакты</h1>
+    <p>Свяжитесь с нами для получения дополнительной информации.</p>
+</div>
+
+</body>
+</html>
