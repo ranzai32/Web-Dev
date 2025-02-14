@@ -1,0 +1,14 @@
+<div class="calculator">
+    <input type="text" class="calculator_input" [(ngModel)]="first" placeholder="Введите первое число" />
+    
+    <select [(ngModel)]="operation">
+      <option [value]="op" *ngFor="let op of operations">{{ op }}</option>
+    </select>
+    
+    <input type="text" class="calculator_input" [(ngModel)]="second" placeholder="Введите второе число" />
+  
+    <span class="calculator_result">{{ result !== undefined ? result : "Нажмите рассчитать!" }}</span>
+  
+    <button (click)="calc()">Рассчитать</button>
+  </div>
+  
