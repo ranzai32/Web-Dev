@@ -3,10 +3,10 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'
 import { GetDataService } from '../service/get-data.service';
-
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-home',
-  imports: [NavbarComponent, ReactiveFormsModule, FormsModule, CommonModule],
+  imports: [NavbarComponent, ReactiveFormsModule, FormsModule, CommonModule, RouterModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

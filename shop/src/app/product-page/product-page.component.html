@@ -1,2 +1,33 @@
 <app-navbar></app-navbar>
-<p>product-page works!</p>
+<main class = "container-fluid mt-5 mb-5">
+
+    <div class="row" pageBox>
+
+        <div class="col-lg-4">
+
+        </div>
+
+        <div class="col-lg-8">
+
+            <div class="row pageContent mt-5" *ngFor="let data of filterProductData">
+
+                <div class="col-lg-4">
+                    <img src="{{data.pdImg}}">
+                </div>
+
+                <div class="col-lg-8">
+                    <h4>{{data.pdName}}</h4>
+                    <p>{{data.pdDesc}}</p>
+                    <p>{{data.pdPrice | number}}<i class="bi bi-currency-dollar"></i></p>
+                    <a class="btn btn-md btn-dark" [href]="data.pdUrl" target="_blank">просмотреть<i class="bi bi-arrow-right"></i></a>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</main>

@@ -1,12 +1,37 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { GetDataService } from '../service/get-data.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { HomeComponent } from "../home/home.component";
 
 @Component({
   selector: 'app-product-page',
-  imports: [NavbarComponent],
+  imports: [NavbarComponent, ReactiveFormsModule, FormsModule, CommonModule, HomeComponent],
   templateUrl: './product-page.component.html',
-  styleUrl: './product-page.component.css'
+  styleUrls: ['./product-page.component.css']
 })
-export class ProductPageComponent {
+export class ProductPageComponent implements OnInit{
 
+
+  getParamValue:any;
+  getProductData:any=[];
+  filterProductData:any=[];
+  constructor(private route:ActivatedRoute, private getData:GetDataService){
+
+  }
+
+  ngOnInit(): void {
+      this.getParamValue = this.route.snapshot.paramMap.get('name');
+
+      this.getData.productData.filter((ele:any)=>{
+        if(ele.pdCategory == this.getParamValue){
+          this.getProductData.push(ele);
+          this.filterProductData.push(ele);
+        }
+      });
+  }
 }

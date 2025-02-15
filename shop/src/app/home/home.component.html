@@ -23,7 +23,7 @@
         <div class="row categoriesBox">
 
           <div class="col-lg-3 col-6 categoriesContent" *ngFor="let data of getCategoriesData">
-            <a routerLink="">
+            <a [routerLink]="['product-page',data.code]">
               <img src="{{data.img}}">
               <h4>{{data.name}}</h4>
             </a>
@@ -38,7 +38,7 @@
         <div class="row productBox">
 
           <p>
-            <a class="float-start link-offset-3"routerLink="">Лучшие устройства</a>
+            <a class="float-start link-offset-3" routerLink="">Лучшие устройства</a>
             <a routerLink="float-end"><i class="bi bi-arrow-right-circle"></i></a>
         </p>
 
